@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${sgsits.app.jwtSecret}")
+    @Value("${college.app.jwtSecret}")
     private String jwtSecret;
 
     private SecretKey getSigningKey() {
