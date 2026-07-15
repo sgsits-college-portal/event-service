@@ -15,7 +15,7 @@ public class RegistrationController {
     private RegistrationService service;
 
     // CREATE REGISTRATION
-    @PostMapping("/event/{eventId}/user/{userId}")
+    @PostMapping(value = {"/event/{eventId}/user/{userId}", "/event/{eventId}/user/{userId}/"})
     public Registration register(@PathVariable Integer eventId, @PathVariable Integer userId) {
         return service.register(new Registration(), eventId, userId);
     }

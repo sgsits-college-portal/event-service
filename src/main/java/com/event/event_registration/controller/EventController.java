@@ -17,8 +17,9 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping
+    // CREATE EVENT (Only ADMIN can create)
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PostMapping(value = {"", "/"})
     public Event createEvent(@Valid @RequestBody Event event) {
 
         System.out.println("Event Name = " + event.getEventName());
