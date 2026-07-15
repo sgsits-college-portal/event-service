@@ -1,3 +1,4 @@
+
 # Event Portal & Registration System
 
 A full-stack web application designed to manage events and coordinate participant registrations. Built with a robust **Spring Boot (Java)** REST API on the backend and a high-performance **Angular** SPA on the frontend, using a local **MySQL** database.
@@ -107,3 +108,4 @@ Ensure the following are installed on your machine:
 * `src/main/java/com/event/event_registration/controller/` — REST API endpoints for JSON exchange.
 * `src/main/java/com/event/event_registration/entity/` — Table schema declarations (`User.java` ➡️ `users`, `Event.java` ➡️ `events`, `Registration.java` ➡️ `registrations`).
 * `src/main/java/com/event/event_registration/repository/` — JPA repository classes for database operations.
+
