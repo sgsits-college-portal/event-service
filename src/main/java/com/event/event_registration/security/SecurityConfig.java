@@ -29,7 +29,7 @@ public class SecurityConfig {
             .exceptionHandling(exception -> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/events", "/events/").permitAll() // Adjust based on your needs
+                .requestMatchers("/events", "/events/", "/actuator/**").permitAll() // Adjust based on your needs
                 .anyRequest().authenticated()
             );
 
